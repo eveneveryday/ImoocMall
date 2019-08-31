@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script src="../node_modules/vue/dist/vue.js"></script>
+  <style>
+    html,body{
+      margin: 5px;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+<!--<div id="app">
+  {{message}}
+</div>
+<div id="app2">
+  <span v-bind:title="message">鼠标悬停几秒查看此处动态帮顶的提示信息！</span>
+</div>
+<div id="app3">
+  <p v-if="seen">现在你看到我了！</p>
+</div>
+<div id="app4">
+  <ol>
+    <li v-for="todo in todos">
+      {{todo.text}}
+    </li>
+  </ol>
+</div>
+<div id="app5">
+  <p>{{message}}</p>
+  <button v-on:click="reverseMessage">逆转消息</button>
+</div>
+<div id="app6">
+  <p>{{message}}</p>
+  <input v-model="message">
+</div>-->
+<div id="app7">
+  <ol>
+    <todo-item
+      v-for="item in groceryList"
+      v-bind:todo="item"
+      v-bind:key="item.id"
+    ></todo-item>
+  </ol>
+</div>
+<div id="app8">
+  <p>{{foo}}</p>
+  <button v-on:click="foo = 'baz'">Change it</button>
+</div>
+<p>Using mustaches:{{rawHtml}}</p>
+<p>Using v-html directive:<span v-html = "span style = "color:red">This should be red</span>"</span></p>
+<script src="index.js"></script>
+</body>
+</html>
